@@ -1,0 +1,77 @@
+$link
+  color: $darkgray
+  border-right: 1px solid $darkgray
+  padding: 0 1em
+
+.top
+  position: relative
+  background-color: $gray
+  display: flex
+  justify-content: space-between
+  padding: 0.4em
+  box-shadow: 0 1px 10px $darkgray
+  a:last-child
+    border: none
+  .help
+    a 
+      @extend $link
+
+  .login
+    a
+      @extend $link
+      color: black
+
+.search
+  display: flex
+  justify-content: space-between
+  .center, .right
+    padding: 2em
+    input, button
+      padding: 1em
+    .search-group
+      display: flex
+      align-items: center
+      margin-bottom: .7em
+      input
+        flex: 1
+        border: 1px solid $gray
+      button.host
+        background-color: $orange
+        color: #fff
+      button.baidu   
+        border-radius: 0 5px 5px 0   
+    .hot_search
+      span
+        font-size: 12px
+        margin-right: 1em
+  .right
+    .contact
+      padding-left: 2em
+      position: relative
+      &:before 
+        position: absolute
+        left: 0
+        font-size: 1.5em
+        transform: rotate(30deg)
+        color: $darkgray
+        top: 0.3em
+      h3
+        color: $darkgray
+        margin-bottom: 0.4em
+      .tel
+        font-size: 1.6em
+        font-family: sans-serif
+        margin-bottom: 0.2em
+      a.common_problem
+        color: $blue
+       
+// noticebar
+p.notice
+  display: flex
+  justify-content: flex-end
+  background-color: $gray
+  padding: 0.5em
+  span
+    margin-right: 1em
+    
+  

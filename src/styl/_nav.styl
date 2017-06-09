@@ -1,0 +1,128 @@
+/* A simple, css only, (some-what) responsive menu */
+ 
+.wrap {
+  display: block;
+  -webkit-box-shadow: 0 0 70px #fff;
+  -moz-box-shadow: 0 0 70px #fff;
+  box-shadow: 0 0 70px #fff;
+  margin-top: 40px;
+  margin: 0 auto
+  text-align: center
+
+
+a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  position: relative;
+  text-align: center;
+}
+
+li {
+  float: left;
+  position: relative;
+}
+
+/* clear'n floats */
+ul:after {
+  clear: both;
+}
+
+ul:before,
+ul:after {
+    content: " ";
+    display: table;
+}
+
+nav {
+  position: relative;
+  background: $blue;
+//   background-image: -webkit-linear-gradient(bottom, $blue 7%, darken($blue, 30%) 100%);
+//   background-image: -moz-linear-gradient(bottom, $blue 7%, darken($blue, 30%) 100%);
+//   background-image: -o-linear-gradient(bottom, $blue 7%, darken($blue, 30%) 100%);
+//   background-image: linear-gradient(bottom, $blue 7%, darken($blue, 30%) 100%);
+  text-align: center;
+  letter-spacing: 1px;
+  // text-shadow: 1px 1px 1px #0E0E0E;
+  -webkit-box-shadow: 2px 2px 3px #888;
+  -moz-box-shadow: 2px 2px 3px #888;
+  box-shadow: 2px 2px 3px #888;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  text-align: center;
+  height: 37px;
+    
+}
+
+.primary {
+  display: flex;
+  padding: .5em;
+  justify-content: space-around;
+  align-items: center;
+}
+.primary li {
+  flex: 1;
+  /* prime */
+  a {
+    display: block;    
+    border-right: 1px solid #3D3D3D;
+    &.current {
+      color: $orange;
+    }
+  }
+}
+
+
+ul.primary li:last-child a {
+  border-right: none;
+}
+
+ul.primary li a:hover {
+  
+  color: $yellow
+}
+
+/* subs */
+ul.sub {
+  display: flex;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 200;
+  box-shadow: 1px 1px 5px #BEBEBE;
+  // border: 1px solid #ccc;
+  // border-top: none;
+  width: 100%;
+  display:none;
+}
+
+ul.sub li {
+  float: none;
+  margin: 0;
+}
+
+ul.sub li a {
+  border-bottom: 1px dotted #ccc;
+  border-right: none;
+  color: #000;
+  // padding: 15px 37px;
+}
+
+ul.sub li:last-child a {
+  border-bottom: none;
+}
+
+ul.sub li a:hover {
+  color: #000;
+  background: #eeeeee;
+}
+
+/* sub display*/
+ul.primary li:hover ul {
+  display: block;
+  background: #fff;
+} 
+}

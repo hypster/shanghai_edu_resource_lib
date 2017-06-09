@@ -1,0 +1,24 @@
+.content
+  h2 
+    span.line  
+    span.title  小学
+    span.line
+  .schools
+    ul
+      - list = [{title: "上外静安外国语小学", img: '1.jpg'}, {title: "金洲小学", img: '2.jpg'}, {title: "彭浦实验小学", img: '3.jpg'}, {title: "金洲小学", img: '2.jpg'}, {title: "彭浦实验小学", img: '3.jpg'},{title: "上外静安外国语小学", img: '1.jpg'}]
+        each item in list
+          a.school(href="./detail.html" style={"background-image": `url(../lib/img/${item.img})`})
+            li
+              h3=item.title
+    
+  h2 
+    span.line  
+    span.title  中学
+    span.line
+  .schools
+    ul
+      - list = [{title: "上外静安外国语小学", img: '1.jpg'}, {title: "彭浦实验小学", img: '3.jpg'}, {title: "上外静安外国语小学", img: '1.jpg'}, {title: "金洲小学", img: '2.jpg'}, {title: "彭浦实验小学", img: '3.jpg'},{title: "上外静安外国语小学", img: '1.jpg'}]
+        each item in list
+          a.school(href="./detail.html" style={"background-image": `url(../lib/img/${item.img})`})
+            li
+              h3=item.title
